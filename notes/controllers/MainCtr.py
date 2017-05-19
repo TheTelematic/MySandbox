@@ -64,8 +64,6 @@ class MainCtr(SessionCtr):
     """
     def get_http_response(self):
 
-
-
         return HttpResponse(self.__header + self.__nav + self.__aside + self.__section + self.__footer)
 
 
