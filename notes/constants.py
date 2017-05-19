@@ -7,8 +7,14 @@
 
         Directorio raiz: /notes/templates/
 """
-html_header = "polls/header.html"
-html_index = "polls/index.html"
+html_header = "notes/header.html"
+html_footer = "notes/footer.html"
+
+
+html_index = "notes/section/index.html"
+
+
+#  -----------------------------------------------------------------------------------
 
 """
     CSS

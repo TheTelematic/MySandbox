@@ -1,0 +1,12 @@
+body{
+    background-color: rgba(40,255,72,0.13);
+    padding: 2% 10% 1%;
+}
+
+header{
+    background-color: rgba(40,255,72,0.2);
+}
+
+footer{
+    background-color: rgba(40,255,72,0.3);
+}

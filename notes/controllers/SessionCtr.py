@@ -1,9 +1,7 @@
 from datetime import datetime
 
-from django.http import HttpResponseRedirect
 
-
-class SessionExpiredMiddleware:
+class SessionCtr:
     def __init__(self):
         pass
 
@@ -13,13 +11,16 @@ class SessionExpiredMiddleware:
         now = datetime.now()
 
         if (now - last_activity).minute > 10:
-            # Do logout / expire session
-            # and then...
-            return HttpResponseRedirect("LOGIN_PAGE_URL")
+
+            request.session.flush()
+
+            return False
 
         if not request.is_ajax():
             # don't set this for ajax requests or else your
             # expired session checks will keep the session from
             # expiring :)
             request.session['last_activity'] = now
+
+            return True
 
