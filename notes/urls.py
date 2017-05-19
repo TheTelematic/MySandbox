@@ -6,4 +6,5 @@ from notes import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+    url(r'^wall/$', views.wall, name='wall'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

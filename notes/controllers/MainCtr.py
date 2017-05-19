@@ -4,6 +4,8 @@ from django.template import loader
 from notes import constants
 from notes.controllers.SessionCtr import SessionCtr
 
+INDEX_PAGE = "/notes/"
+
 
 class MainCtr(SessionCtr):
     def __init__(self, request, stylesheets=None, scripts=None):
@@ -16,8 +18,8 @@ class MainCtr(SessionCtr):
 
         SessionCtr.__init__(self)
 
-        #if not self.process_request(request):
-        #    HttpResponseRedirect("")  # TODO: CHANGE THIS
+        if not self.process_request(request):
+            HttpResponseRedirect(INDEX_PAGE)
 
         template_header = loader.get_template(constants.html_header)
         template_footer = loader.get_template(constants.html_footer)

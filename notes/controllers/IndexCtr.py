@@ -1,6 +1,7 @@
-from django.template import loader
+from django.shortcuts import render
 
 from notes import constants
+from notes.controllers import LoginForm
 from notes.controllers.MainCtr import MainCtr
 
 
@@ -8,12 +9,18 @@ class IndexCtr(MainCtr):
     def __init__(self, request):
         MainCtr.__init__(self, request)
 
-        template = loader.get_template(constants.html_index)
+        self.request = request
 
-        context = {
+    def is_logged(self):
+        result = LoginForm.get_login(self.request)
 
-        }
+        if result is "1":
+            print "Logged"
+            return True
+        else:
+            print "NOT logged"
+            self.add_section(render(self.request, constants.html_login, {'form': result}).content)
 
-        self.add_section(template.render(context, request))
+
 
 

@@ -12,7 +12,10 @@ html_footer = "notes/footer.html"
 
 
 html_index = "notes/section/index.html"
+html_wall = "notes/section/wall.html"
 
+
+html_login = "notes/section/forms/login.html"
 
 #  -----------------------------------------------------------------------------------
 

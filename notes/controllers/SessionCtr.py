@@ -7,7 +7,13 @@ class SessionCtr:
 
     @staticmethod
     def process_request(request):
-        last_activity = request.session['last_activity']
+
+        try:
+            last_activity = request.session['last_activity']
+
+        except KeyError:
+            return False
+
         now = datetime.now()
 
         if (now - last_activity).minute > 10:
