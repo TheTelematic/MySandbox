@@ -20,6 +20,7 @@ class IndexCtr(MainCtr):
         else:
             print "NOT logged"
             self.add_section(render(self.request, constants.html_login, {'form': result}).content)
+            return False
 
 
 

@@ -8,9 +8,6 @@ from notes import constants
 class LoginForm(forms.Form):
     username = forms.CharField(label="User", max_length=100)
 
-    def __init__(self):
-        super(LoginForm, self).__init__()
-
 
 def get_login(request):
     if request.method == 'POST':

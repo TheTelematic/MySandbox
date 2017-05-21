@@ -12,10 +12,12 @@ def index(request):
         :param request: HttpRequest
         :return: response: HttpResponse
         """
-    if IndexCtr(request=request).is_logged():
+    index = IndexCtr(request=request);
+
+    if index.is_logged():
         return wall(request)
     else:
-        return IndexCtr(request=request).get_http_response()
+        return index.get_http_response()
 
 
 def wall(request):
