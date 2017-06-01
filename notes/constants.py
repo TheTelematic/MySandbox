@@ -11,7 +11,6 @@ html_header = "notes/header.html"
 html_footer = "notes/footer.html"
 
 
-html_index = "notes/section/index.html"
 html_wall = "notes/section/wall.html"
 
 

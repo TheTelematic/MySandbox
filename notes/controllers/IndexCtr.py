@@ -7,7 +7,7 @@ from notes.controllers.MainCtr import MainCtr
 
 class IndexCtr(MainCtr):
     def __init__(self, request):
-        MainCtr.__init__(self, request)
+        MainCtr.__init__(self, request, stylesheets=["css/index.css", "css/login.css", ])
 
         self.request = request
 

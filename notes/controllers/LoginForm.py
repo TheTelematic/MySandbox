@@ -1,12 +1,9 @@
 from django import forms
-from django.http import HttpResponseRedirect
-from django.shortcuts import render
-
-from notes import constants
 
 
 class LoginForm(forms.Form):
     username = forms.CharField(label="User", max_length=100)
+    password = forms.CharField(widget=forms.PasswordInput())
 
 
 def get_login(request):
@@ -26,11 +23,8 @@ def get_login(request):
             print "Form not valid"
 
             return LoginForm()
-            #form = ()
-            #return render(request, constants.html_login, {'form': form}).content
 
     else:
-        #  print "HHHHEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
 
         return LoginForm()
 

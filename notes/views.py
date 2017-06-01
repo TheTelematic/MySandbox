@@ -11,13 +11,13 @@ def index(request):
             Index of the app
         :param request: HttpRequest
         :return: response: HttpResponse
-        """
-    index = IndexCtr(request=request);
+    """
+    index_handler = IndexCtr(request=request)
 
-    if index.is_logged():
+    if index_handler.is_logged():
         return wall(request)
     else:
-        return index.get_http_response()
+        return index_handler.get_http_response()
 
 
 def wall(request):
@@ -25,5 +25,5 @@ def wall(request):
             Index of the app
         :param request: HttpRequest
         :return: response: HttpResponse
-        """
+    """
     return WallCtr(request=request).get_http_response()

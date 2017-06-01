@@ -26,6 +26,27 @@
     {% load staticfiles%}
     <link rel="stylesheet" href="{% static "css/general.css" %}">
     <link rel="icon" href="{% static "images/favicon.png" %}">
+
+
+    {% if stylesheets.length is not 0 %}
+
+        {% for st in stylesheets %}
+
+            <link rel="stylesheet" href="{% static st %}">
+
+        {% endfor %}
+
+    {% endif %}
+
+    {% if scripts.length is not 0 %}
+
+        {% for sc in scripts %}
+
+            <script src="{% static sc %}"></script>
+
+        {% endfor %}
+
+    {% endif %}
 </head>
 <body>
 
