@@ -14,6 +14,7 @@ html_footer = "notes/footer.html"
 html_wall = "notes/section/wall.html"
 
 
+html_register = "notes/section/forms/register.html"
 html_login = "notes/section/forms/login.html"
 
 #  -----------------------------------------------------------------------------------

@@ -1,0 +1,16 @@
+<section>
+    <div class="register_box">
+        {% if error is not None %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+        <form action="/notes/register/" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <div class="register_submit"><input type="submit" value="Register" /></div>
+        </form>
+        <form action="/notes/" method="post">
+            {% csrf_token %}
+            <input class="register_go_index" type="submit" value="Go back"/>
+        </form>
+    </div>
+</section>

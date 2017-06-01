@@ -3,12 +3,11 @@ from django.template import loader
 
 from notes import constants
 from notes.controllers.SessionCtr import SessionCtr
-
-INDEX_PAGE = "/notes/"
+from notes.strings import INDEX_PAGE
 
 
 class MainCtr(SessionCtr):
-    def __init__(self, request, stylesheets=None, scripts=None):
+    def __init__(self, request, stylesheets=None, scripts=None, sessionRequired=True):
         """
             Initialize the header of the html file, and check if the session is expired
         :param request: HttpRequest
@@ -18,7 +17,7 @@ class MainCtr(SessionCtr):
 
         SessionCtr.__init__(self)
 
-        if not self.process_request(request):
+        if sessionRequired and not self.process_request(request):
             HttpResponseRedirect(INDEX_PAGE)
 
         template_header = loader.get_template(constants.html_header)
