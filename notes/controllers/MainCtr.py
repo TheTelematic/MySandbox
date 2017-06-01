@@ -23,7 +23,7 @@ class MainCtr(SessionCtr):
         template_header = loader.get_template(constants.html_header)
         template_footer = loader.get_template(constants.html_footer)
         context = {
-            'stylesheets': stylesheets,
+            'stylesheets': stylesheets + [constants.css_header, ],
             'scripts': scripts,
         }
 

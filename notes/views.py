@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+from django.shortcuts import redirect
 
 from notes.controllers.IndexCtr import IndexCtr
 from notes.controllers.RegisterCtr import RegisterCtr
@@ -16,7 +17,8 @@ def index(request):
     index_handler = IndexCtr(request=request)
 
     if index_handler.is_logged():
-        return wall(request)
+
+        return redirect('/notes/wall/')
     else:
         return index_handler.get_http_response()
 
@@ -42,7 +44,7 @@ def register(request, error=None):
 
     if register_handler.register():
         print "REGISTRO CORRECTO"
-        return wall(request)
+        return redirect('/notes/wall/')
     else:
         return register_handler.get_http_response()
 

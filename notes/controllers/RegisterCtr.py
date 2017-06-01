@@ -8,7 +8,7 @@ from notes.strings import REGISTER_OK, ERROR_EXISTING_USER, EMPTY_REGISTER_FORM
 
 class RegisterCtr(MainCtr):
     def __init__(self, request, error=None):
-        MainCtr.__init__(self, request, stylesheets=["css/register.css", ], sessionRequired=False)
+        MainCtr.__init__(self, request, stylesheets=["css/register.css", ], scripts=["js/register.js"], sessionRequired=False)
 
         self.request = request
 
