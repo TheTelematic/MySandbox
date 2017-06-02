@@ -1,7 +1,8 @@
 from django import forms
 
 from notes.models import User
-from notes.strings import REGISTER_OK, ERROR_EXISTING_USER, EMPTY_REGISTER_FORM
+from notes.strings import REGISTER_OK, ERROR_EXISTING_USER, EMPTY_REGISTER_FORM, ERROR_PASSWORD_IS_EMPTY, \
+    ERROR_USER_IS_EMPTY
 
 
 class RegisterForm(forms.Form):
@@ -19,6 +20,12 @@ def register(request):
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
 
+            if username == "":
+                return ERROR_USER_IS_EMPTY
+
+            if password == "":
+                return ERROR_PASSWORD_IS_EMPTY
+
             query = User.objects.filter(username=username)
             print query
 
@@ -31,7 +38,7 @@ def register(request):
             request.session['username'] = username
             request.session['password'] = password
 
-            print "DEBUG: User-> {} Password-> {}".format(username, password)
+            # print "DEBUG: User-> {} Password-> {}".format(username, password)
 
             user = User(username=username, password=password)
 

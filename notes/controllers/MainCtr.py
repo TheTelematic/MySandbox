@@ -7,7 +7,7 @@ from notes.strings import INDEX_PAGE
 
 
 class MainCtr(SessionCtr):
-    def __init__(self, request, stylesheets=None, scripts=None, sessionRequired=True):
+    def __init__(self, request, stylesheets=[], scripts=[], sessionRequired=True):
         """
             Initialize the header of the html file, and check if the session is expired
         :param request: HttpRequest
@@ -25,13 +25,15 @@ class MainCtr(SessionCtr):
         context = {
             'stylesheets': stylesheets + [constants.css_header, ],
             'scripts': scripts,
+            'favicon': constants.img_favicon,
+
         }
 
         self.__header = template_header.render(context, request)
         self.__nav = ""
         self.__aside = ""
         self.__section = ""
-        self.__footer = template_footer.render({}, request)
+        self.__footer = template_footer.render({'aboutme': 'aboutme/'}, request)
 
     """
         Protected Methods

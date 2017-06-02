@@ -7,8 +7,10 @@
             {% csrf_token %}
             {{ form }}
             <label for="repeat_password">Confirm the password:</label><input type="password" id="repeat_password" />
+            <span id="message_error"></span>
             <div class="register_submit"><input id="submit_register" type="submit" value="Register"/></div>
         </form>
+
         <form action="/notes/" method="post">
             {% csrf_token %}
             <input class="register_go_index" type="submit" value="Go back"/>

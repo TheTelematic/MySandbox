@@ -32,3 +32,14 @@
     width: 50%;
     margin-left: 40%;
 }
+
+#message_error{
+    width: 100%;
+    display: block;
+    float: left;
+    clear: left;
+    font-weight: bold;
+    font-style: italic;
+    margin: 5% 0 0;
+
+}

@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import redirect
 
+from notes.controllers.AboutMeCtr import AboutMeCtr
 from notes.controllers.IndexCtr import IndexCtr
 from notes.controllers.RegisterCtr import RegisterCtr
 from notes.controllers.WallCtr import WallCtr
@@ -48,4 +49,13 @@ def register(request, error=None):
     else:
         return register_handler.get_http_response()
 
+
+def aboutme(request):
+    """
+        See the page about me
+    :param request: HttpRequest
+    :return: HttpResponse
+    """
+
+    return AboutMeCtr(request=request).get_http_response()
 
