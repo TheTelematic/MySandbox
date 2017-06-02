@@ -5,7 +5,7 @@ section{
 .container, .aboutme_image{
     float: left;
     display: block;
-    width: 50%;
+    width: 30%;
 
 }
 
@@ -15,13 +15,33 @@ section{
 }
 
 .aboutme_image img{
-    width: 100%;
-    margin: 5%;
+    width: 170%;
+    margin: 5% 5% 5% 40%;
+}
+
+#information_of_me{
+    width: 70%;
 }
 
 .aboutme_name{
     float: left;
-    font-size: large;
+    font-size: x-large;
     font-weight: bold;
     margin-top: 5%;
+}
+
+.aboutme_opinion{
+    background-color: inherit;
+    font-style: italic;
+    margin: 2%;
+}
+
+aside ul li{
+    list-style-type: none;
+    margin-top: 3%;
+}
+
+aside ul li img{
+    width: 15%;
+    margin-right: 2%;
 }

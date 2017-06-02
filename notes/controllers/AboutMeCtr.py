@@ -11,4 +11,6 @@ class AboutMeCtr(MainCtr):
         self.request = request
 
         self.add_section(render(self.request, constants.html_aboutme).content)
+        self.add_aside(render(self.request, constants.html_aboutme_aside).content)
+
 

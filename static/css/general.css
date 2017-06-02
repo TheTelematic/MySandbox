@@ -29,3 +29,18 @@ footer{
     text-align: center;
     padding: 1%;
 }
+
+section{
+    width: 70%;
+    margin-top: 5%;
+}
+
+aside{
+    float: right;
+    margin-top: 5%;
+    margin-right: 5%;
+}
+
+aside ul{
+    margin-top: 20%;
+}

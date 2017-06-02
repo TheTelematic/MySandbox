@@ -33,7 +33,7 @@ class MainCtr(SessionCtr):
         self.__nav = ""
         self.__aside = ""
         self.__section = ""
-        self.__footer = template_footer.render({'aboutme': 'aboutme/'}, request)
+        self.__footer = template_footer.render({}, request)
 
     """
         Protected Methods

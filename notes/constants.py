@@ -17,14 +17,21 @@ url_aboutme = r'^aboutme/'
 
         Directorio raiz: /notes/templates/
 """
+#  Header and footer
 html_header = "notes/header.html"
 html_footer = "notes/footer.html"
 
 
+#  Sections
 html_wall = "notes/section/wall.html"
 html_aboutme = "notes/section/aboutme.html"
 
 
+#  Aside
+html_aboutme_aside = "notes/aside/aboutme_aside.html"
+
+
+#  Forms
 html_register = "notes/section/forms/register.html"
 html_login = "notes/section/forms/login.html"
 
