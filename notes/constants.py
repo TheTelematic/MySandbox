@@ -38,13 +38,14 @@ html_login = "notes/section/forms/login.html"
 css_header = "css/general.css"
 css_login = "css/login.css"
 css_register = "css/register.css"
+css_aboutme = "css/aboutme.css"
 
 """
     JAVASCRIPT
 
         Directorio raiz: /static/
 """
-js_register = "css/register.js"
+js_register = "js/register.js"
 
 
 """

@@ -1,0 +1,27 @@
+section{
+    display: inline-block;
+}
+
+.container, .aboutme_image{
+    float: left;
+    display: block;
+    width: 50%;
+
+}
+
+.col-sm-4{
+    display: block;
+    float: left;
+}
+
+.aboutme_image img{
+    width: 100%;
+    margin: 5%;
+}
+
+.aboutme_name{
+    float: left;
+    font-size: large;
+    font-weight: bold;
+    margin-top: 5%;
+}

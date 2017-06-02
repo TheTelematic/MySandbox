@@ -6,7 +6,7 @@ from notes.controllers.MainCtr import MainCtr
 
 class AboutMeCtr(MainCtr):
     def __init__(self, request):
-        MainCtr.__init__(self, request, stylesheets=["css/register.css", ], scripts=["js/register.js"], sessionRequired=False)
+        MainCtr.__init__(self, request, stylesheets=[constants.css_aboutme, ], sessionRequired=False)
 
         self.request = request
 

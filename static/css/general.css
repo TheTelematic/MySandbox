@@ -11,6 +11,11 @@ header{
     font-weight: bold;
 }
 
+header a:hover{
+    color: azure;
+    text-decoration: none;
+}
+
 footer{
     background-color: rgba(40,255,72,0.3);
     text-align: center;
