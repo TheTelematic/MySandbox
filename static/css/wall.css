@@ -1,0 +1,22 @@
+aside{
+    float: left;
+    clear: left;
+}
+
+.note{
+
+    border: 2px solid rgba(234,145,30,0.82);
+    border-top-right-radius: 8px;
+    margin: 5%;
+    padding: 5%;
+    font-family: 'Slabo 27px', sans-serif;
+    font-size: large;
+    height: 30%;
+    width: 30%;
+    display: inline-block;
+}
+
+.note:hover{
+    background-color: rgba(234,145,30,0.49);
+}
+

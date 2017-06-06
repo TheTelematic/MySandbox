@@ -48,6 +48,7 @@ css_header = "css/general.css"
 css_login = "css/login.css"
 css_register = "css/register.css"
 css_aboutme = "css/aboutme.css"
+css_wall = "css/wall.css"
 
 """
     JAVASCRIPT

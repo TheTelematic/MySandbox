@@ -1,7 +1,13 @@
+@font-face {
+    font-family: general;
+    src: url("/static/fonts/font1.ttf");
+}
+
+
 body{
     background-color: rgba(40,255,72,0.13);
     padding: 1% 10% 1%;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Bubbler One', 'Open Sans', sans-serif;
 }
 
 header{
@@ -20,12 +26,13 @@ header .user-box{
     width: auto;
     float: right;
     margin-right: 5%;
-    font-size: small;
+    margin-top: 0.1%;
+    font-size: smaller;
 }
 
 
 header a:hover{
-    color: azure;
+    font-weight: bold;
     text-decoration: none;
 }
 
@@ -34,6 +41,7 @@ footer{
     text-align: center;
     align-items: center;
     align-content: center;
+    font-weight: bold;
 }
 
 .error{
