@@ -5,6 +5,7 @@ from django.shortcuts import redirect
 
 from notes.controllers.AboutMeCtr import AboutMeCtr
 from notes.controllers.IndexCtr import IndexCtr
+from notes.controllers.LogoutCtr import LogoutCtr
 from notes.controllers.RegisterCtr import RegisterCtr
 from notes.controllers.WallCtr import WallCtr
 
@@ -59,3 +60,12 @@ def aboutme(request):
 
     return AboutMeCtr(request=request).get_http_response()
 
+
+def logout(request):
+    """
+        Logout
+    :param request: HttpRequest
+    :return: HttpResponse
+    """
+    LogoutCtr(request)
+    return redirect('/notes/')

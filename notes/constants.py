@@ -10,6 +10,7 @@ url_index = r'^$'
 url_wall = r'^wall/$'
 url_register = r'^register/$'
 url_aboutme = r'^aboutme/'
+url_logout = r'^logout/'
 
 
 """
@@ -29,6 +30,7 @@ html_aboutme = "notes/section/aboutme.html"
 
 #  Aside
 html_aboutme_aside = "notes/aside/aboutme_aside.html"
+html_empty_aside = "notes/aside/empty_aside.html"
 
 
 #  Forms

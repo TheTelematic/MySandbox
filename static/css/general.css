@@ -9,7 +9,20 @@ header{
     text-align: center;
     font-size: x-large;
     font-weight: bold;
+    width: 100%;
 }
+
+header a{
+    width: 65%;
+}
+
+header .user-box{
+    width: auto;
+    float: right;
+    margin-right: 5%;
+    font-size: small;
+}
+
 
 header a:hover{
     color: azure;
@@ -32,15 +45,39 @@ footer{
 
 section{
     width: 70%;
-    margin-top: 5%;
+    margin: 5%;
 }
 
 aside{
+    width: 15%;
     float: right;
     margin-top: 5%;
     margin-right: 5%;
+    display: inline-block;
 }
 
 aside ul{
     margin-top: 20%;
+}
+
+aside ul li{
+    list-style-type: none;
+    margin-top: 3%;
+}
+
+.login_submit input{
+    border-radius: 10px;
+    background-color: inherit;
+    border-color: #01020b;
+
+}
+
+.login_submit input:hover{
+    color: orangered;
+    box-shadow: none;
+    border: 2px solid orangered;
+}
+
+.login_submit input:active {
+    background-color: rgba(234, 145, 30, 0.82);
 }

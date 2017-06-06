@@ -22,6 +22,8 @@ class MainCtr(SessionCtr):
 
         template_header = loader.get_template(constants.html_header)
         template_footer = loader.get_template(constants.html_footer)
+        template_aside = loader.get_template(constants.html_empty_aside)
+
         context = {
             'stylesheets': stylesheets + [constants.css_header, ],
             'scripts': scripts,
@@ -31,7 +33,7 @@ class MainCtr(SessionCtr):
 
         self.__header = template_header.render(context, request)
         self.__nav = ""
-        self.__aside = ""
+        self.__aside = template_aside.render(context, request)
         self.__section = ""
         self.__footer = template_footer.render({}, request)
 

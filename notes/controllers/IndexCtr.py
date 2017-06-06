@@ -39,7 +39,7 @@ class IndexCtr(MainCtr):
             return False
 
         elif result is EMPTY_LOGIN_FORM:
-            print ERROR_PASSWORD_INCORRECT
+            print EMPTY_LOGIN_FORM
             context = {
                 'form': LoginForm.get_empty_form(),
             }

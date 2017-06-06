@@ -9,5 +9,6 @@ urlpatterns = [
     url(constants.url_wall, views.wall, name='wall'),
     url(constants.url_register, views.register, name='register'),
     url(constants.url_aboutme, views.aboutme, name='aboutme'),
+    url(constants.url_logout, views.logout, name='logout'),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

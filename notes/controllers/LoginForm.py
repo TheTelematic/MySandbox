@@ -47,8 +47,15 @@ def get_login(request):
             return EMPTY_LOGIN_FORM
 
     else:
-        print "Login form via GET"
-        return EMPTY_LOGIN_FORM
+
+        if 'username' in request.session:
+
+            return LOGIN_OK
+
+        else:
+
+            print "Login form via GET"
+            return EMPTY_LOGIN_FORM
 
 
 def get_empty_form():

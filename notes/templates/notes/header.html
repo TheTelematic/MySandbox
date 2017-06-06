@@ -49,6 +49,17 @@
 </head>
 <body>
 
-<header><a href="/notes/">
+<header>
+    <a href="/notes/">
     Welcome to Notes!
-</a></header>
+
+
+</a>
+{% with username=request.session.username %}
+        {% if username %}
+        <div class="user-box">
+            Hi {{ username }}! - <a href="/notes/logout/">Logout</a>
+        </div>
+        {% endif %}
+    {% endwith %}
+</header>
