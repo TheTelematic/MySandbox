@@ -69,3 +69,51 @@ def logout(request):
     """
     LogoutCtr(request)
     return redirect('/notes/')
+
+
+def wall_newnote(request):
+    """
+
+    :param request:
+    :return:
+    """
+    wall = WallCtr(request=request)
+
+    wall.new_note()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

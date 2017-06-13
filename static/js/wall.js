@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     $('.note').on('click', function () {
 
-        console.log(this.id);
+        //console.log(this.id);
         $('#' + this.id + " .note_longer").toggle();
 
     });

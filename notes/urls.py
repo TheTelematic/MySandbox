@@ -7,6 +7,7 @@ from notes import views, constants
 urlpatterns = [
     url(constants.url_index, views.index, name='index'),
     url(constants.url_wall, views.wall, name='wall'),
+    url(constants.url_wall_newnote, views.wall_newnote, name='wall'),
     url(constants.url_register, views.register, name='register'),
     url(constants.url_aboutme, views.aboutme, name='aboutme'),
     url(constants.url_logout, views.logout, name='logout'),

@@ -8,10 +8,10 @@
 """
 url_index = r'^$'
 url_wall = r'^wall/$'
+url_wall_newnote = r'^wall/new_note$'
 url_register = r'^register/$'
 url_aboutme = r'^aboutme/'
 url_logout = r'^logout/'
-
 
 """
     HTML
@@ -31,7 +31,7 @@ html_aboutme = "notes/section/aboutme.html"
 #  Aside
 html_aboutme_aside = "notes/aside/aboutme_aside.html"
 html_empty_aside = "notes/aside/empty_aside.html"
-
+html_wall_aside = "notes/aside/wall_aside.html"
 
 #  Forms
 html_register = "notes/section/forms/register.html"

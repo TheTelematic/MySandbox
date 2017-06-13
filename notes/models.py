@@ -14,3 +14,6 @@ class User(models.Model):
         return self.username
 
 
+class Model(models.Model):
+    content = models.TextField(max_length=1024)
+

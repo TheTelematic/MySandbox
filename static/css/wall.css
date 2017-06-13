@@ -1,6 +1,11 @@
 aside{
     float: left;
     clear: left;
+    background-color: rgba(234,167,0,0.73);
+    padding: 1%;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 10px;
 }
 
 .note{

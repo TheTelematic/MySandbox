@@ -1,0 +1,10 @@
+<aside>
+    <div>Write a new note!</div>
+    <div class="new_note">
+        <form action="/notes/wall/new_note" method="post">
+            {% csrf_token %}
+            {{ form }}
+        </form>
+    </div>
+
+</aside>
