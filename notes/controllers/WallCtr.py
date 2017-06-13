@@ -6,7 +6,7 @@ from notes.controllers.MainCtr import MainCtr
 
 class WallCtr(MainCtr):
     def __init__(self, request):
-        MainCtr.__init__(self, stylesheets=[constants.css_wall], request=request)
+        MainCtr.__init__(self, stylesheets=[constants.css_wall], scripts=[constants.js_wall], request=request)
 
         template = loader.get_template(constants.html_wall)
 

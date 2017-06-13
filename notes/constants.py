@@ -56,6 +56,7 @@ css_wall = "css/wall.css"
         Directorio raiz: /static/
 """
 js_register = "js/register.js"
+js_wall = "js/wall.js"
 
 
 """
